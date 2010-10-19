@@ -1,7 +1,12 @@
 # encoding: utf-8
 
 # Load Cri
-require 'cri'
+begin
+  require 'cri'
+rescue LoadError
+  require 'rubygems'
+  require 'cri'
+end
 
 module Nanoc3::CLI
 end
